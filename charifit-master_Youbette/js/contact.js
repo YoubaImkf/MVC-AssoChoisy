@@ -34,7 +34,7 @@ $(document).ready(function(){
                 },
                 prenom: {
                     required: true,
-                    minlength: 40
+                    minlength: 2
                 }
             },
             messages: {
