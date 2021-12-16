@@ -89,12 +89,24 @@
                             <div class="col-12">
                                     <div class="form-group">
                                         <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre Message'" placeholder=" Entrer votre Message"></textarea>
+                                        <input type="hidden" name="g-token" id="g-token">
                                     </div>
                                 </div>
                             <div class="form-group mt-3">
                                 <button type="submit" class="button button-contactForm boxed-btn">Envoyer</button>
                             </div>
                         </form>
+                        <script src="https://www.google.com/recaptcha/api.js?render=6Lc9TKQdAAAAAHNOvo12z-fgATp05iyFawC6_pNz"></script>
+                            <script>
+      
+                                grecaptcha.ready(function() {
+                                grecaptcha.execute                      ('6Lc9TKQdAAAAAHNOvo12z-fgATp05iyFawC6_pNz', {action:                   'submit'}).then(function(token) {
+                                     // Add your logic to submit to your backend server here.
+                                 document.getElementById('g-token').value = token;
+                                  });
+                                });
+      
+                        </script>
                     </div>
                     
                     <!--------------------------------------------------------------------------------------------------------->
