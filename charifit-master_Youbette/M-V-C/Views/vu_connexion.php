@@ -1,12 +1,16 @@
-           <h1> Connexion </h1>
-
+<br><br><br><br><br><br><br>
+<div id="container">
+           <h1>Connexion</h1>
+    <link rel="stylesheet" href="css/connexion.css"> 
     <form action="index.php?uc=administrer&action=controler" method="post">
-        Identifiant : <input type ="text" name ="login">
+        <label>Identifiant :</label>  <input type ="text" name ="login">
         <br><br>
-        Mot de passe :<input type ="password" name ="mdp">
+    <label>Mot de passe :</label>    <input type ="password" name ="mdp">
         <br><br>
         <input type="submit" name="valider" value="Valider">
     </form>
+</div>
+<br><br><br><br><br>
    
 
 

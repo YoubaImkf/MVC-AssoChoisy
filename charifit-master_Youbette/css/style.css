@@ -10,7 +10,7 @@ scroll-behavior: smooth;
 }
 
 .yo{/*message erreur login*/
-  color: red;
+  color: rgba(255, 0, 0, 0.644);
 }
 
 .button1{
@@ -1360,7 +1360,7 @@ h3 {
 
 /* line 186, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li:hover a {
-  color: #000;
+  color: rgb(201 54 123);
 }
 
 /* line 191, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */

@@ -3,7 +3,7 @@
 session_start();
 include("M-V-C/Views/vu_header.php") ;
 //include( la base de donnée )
-include("M-V-C/Models/data.php");
+include("M-V-C/Models.Data/data.choisy.php");
 
 
 
@@ -21,7 +21,7 @@ else
 
 $pdo=  Pdoassochoisy::getPdoassochoisy();
 
-// selon l'uc=... ↓
+// controle uc selon l'uc=... ↓
 switch($uc)   					
 {
 
