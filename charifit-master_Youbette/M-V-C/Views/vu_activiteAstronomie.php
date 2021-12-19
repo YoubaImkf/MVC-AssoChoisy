@@ -2,7 +2,7 @@
 
 <!--------------------------------------------- ACTIVITE ASTRONOMIE ------------------------------------------------>
 
-<!-- bradcam_area_start  -->
+<!-- bradcam_area_start  // BANIERE -->
  <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row">
@@ -15,6 +15,28 @@
         </div>
     </div>
 <!-- bradcam_area_end  -->
+
+
+<!--<?php // ----------------AFFICHER IMAGE / ARTICLE DE CETTE MANIERE----------------- //
+//foreach ($LesVoitures as $uneVoiture)
+{
+    $image = $uneVoiture['image'];
+    $annee = $uneVoiture['annee'];
+    $couleur = $uneVoiture['couleur'];
+    $prix = $uneVoiture['prix'];
+    ?>
+    <ul>
+
+        <li><img src = "images/<?php echo $image ?>" alt="image" /> </li>
+        <li> Année : <?= $annee ?>/</li>
+        <li> Couleur : <?= $couleur ?>/</li>    
+        <li> Prix : <?= $prix ?> €</li>
+ 
+  </ul>
+<?php 
+}
+?> //
+------------------------------------------------------------------------------------------>
 
 
       <!--======================== Blog Area ======================-->

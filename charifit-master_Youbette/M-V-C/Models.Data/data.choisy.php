@@ -60,7 +60,7 @@ class Pdoassochoisy
 */        
 public function getUser($login,$mdp)
 {
-    // $mdp = hash('sha256',$mdp);       /* ----php hash le mdp entrer POUR MATCHER LE HASHAGE DU SERVEUR ET LE mdp entrer -------*/
+    $mdp = hash('sha256',$mdp);       /* ----php hash le mdp entrer POUR MATCHER LE HASHAGE DU SERVEUR ET LE mdp entrer -------*/
     $req = "select * from gestionnaire where login = :login and mdp = :mdp";
     $res =  self::$monPdo->prepare($req);
     $res->bindvalue(':login',$login);
