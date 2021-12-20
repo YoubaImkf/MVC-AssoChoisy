@@ -12,7 +12,7 @@ switch ($action)
         }
     case 'animation':
         {
-            include("M-V-C/Views/vu_activiteAnimation.php");
+            include("M-V-C/Views/vu_activiteAnimations.php");
             break;
         }
     case 'jardin':

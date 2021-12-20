@@ -86,7 +86,7 @@
                    
                                                 <li><a href="index.php?uc=pages&action=jardin">Jardin-partager</a></li>
                                                 <li><a href="index.php?uc=pages&action=astronomie">Astronomie</a></li>
-                                                <li><a href="index.php?uc=pages&action=planetarium">Planétarium</a></li>
+                                                <li><a href="index.php?uc=pages&action=animations">Animations</a></li>
 
                                             </ul>
                                         </li>
