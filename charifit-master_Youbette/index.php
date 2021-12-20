@@ -28,6 +28,7 @@ switch($uc)
     
 	case 'accueil':
 	{
+        $articleRecent = $pdo->getarticleRecent();
         include("M-V-C/Views/vu_header.php") ;
         include("M-V-C/Views/vu_banniere.php") ;
 		include("M-V-C/Views/vu_articleVideo.php");

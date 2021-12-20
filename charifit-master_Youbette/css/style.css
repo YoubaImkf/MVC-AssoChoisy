@@ -3062,6 +3062,7 @@ h3 {
 .latest_activites_area .activites_info p.para_1 {
   margin-bottom: 22px;
   margin-top: 20px;
+  text-align: justify;
 }
 
 /* line 62, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */

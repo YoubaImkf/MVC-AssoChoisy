@@ -30,8 +30,8 @@ class Pdoassochoisy
  */				
         private function __construct()
         {
-                Pdoassochoisy::$monPdo = new PDO(Pdoassochoisy::$serveur.';'.Pdoassochoisy::$bdd, Pdoassochoisy::$user, Pdoassochoisy::$mdp); 
-                Pdoassochoisy::$monPdo->query("SET CHARACTER SET utf8");
+            Pdoassochoisy::$monPdo = new PDO(Pdoassochoisy::$serveur.';'.Pdoassochoisy::$bdd, Pdoassochoisy::$user, Pdoassochoisy::$mdp); 
+            Pdoassochoisy::$monPdo->query("SET CHARACTER SET utf8");
         }
         public function _destruct(){
             Pdoassochoisy::$monPdo = null;
@@ -101,10 +101,10 @@ public function getUser($login,$mdp)
     // A    rticle le plus recent 
     public function getarticleRecent()
     {
-        $req="select texte, MAX(datejour) AS 'dateRecent' FROM articles WHERE datejour > CURRENT_DATE() GROUP BY 'dateRecent' "; 
+        $req="select texte FROM articles WHERE datejour > CURDATE() limit 1"; 
         //faire la requete SQL
         $res =  self::$monPdo->query($req);
-		$laLigne = $res->fetch();
+		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
 
 		return $laLigne; 
     }
