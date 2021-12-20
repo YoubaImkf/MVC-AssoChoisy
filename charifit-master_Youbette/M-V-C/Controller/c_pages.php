@@ -20,6 +20,7 @@ switch ($action)
             include("M-V-C/Views/vu_activiteJardin.php");
             break;
         }
+        
 //----------------------------------------------------------------------
 
 
