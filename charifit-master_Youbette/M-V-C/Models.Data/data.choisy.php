@@ -98,5 +98,15 @@ public function getUser($login,$mdp)
 		return $laLigne; 
 	}
 
- // A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer //
+    // A    rticle le plus recent 
+    public function getarticleRecent()
+    {
+        $req="select texte, MAX(datejour) AS 'dateRecent' FROM articles WHERE datejour > CURRENT_DATE() GROUP BY 'dateRecent' "; 
+        //faire la requete SQL
+        $res =  self::$monPdo->query($req);
+		$laLigne = $res->fetch();
+
+		return $laLigne; 
+    }
+ //A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer //
 }

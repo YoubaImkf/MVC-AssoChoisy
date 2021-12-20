@@ -10,7 +10,7 @@ scroll-behavior: smooth;
 }
 
 .yo{/*message erreur login*/
-  color: rgba(255, 0, 0, 0.644);
+  color: red;
 }
 
 .button1{
@@ -1360,7 +1360,7 @@ h3 {
 
 /* line 186, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li:hover a {
-  color: rgb(201 54 123);
+  color: #000;
 }
 
 /* line 191, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -2556,7 +2556,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .breadcam_bg {
-  background-image: url(../img/banner/bradcam.png);
+  background-image: url(../img/banner/Systeme_sol.png);
 }
 
 /* line 4, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
@@ -2579,7 +2579,6 @@ h3 {
 
 /* line 15, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .bradcam_area.overlay::before {
-  background: #3CC78F;
   opacity: .8;
 }
 
