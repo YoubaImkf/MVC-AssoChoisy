@@ -31,10 +31,24 @@
                      <p class="excert"> </p>
                      <p> En cours de publication </p>
                      <div class="quote-wrapper">
-                        <div class="quotes"> </div>
+                        <div class="quotes">
+                    
+                     <?php //on affiche l'article
+
+                     foreach($unarticle as $article) 
+                     {
+                     ?> 
+
+                        <p> <?php echo $article ?> </p>               
+                     
+
+                     <?php 
+                      } 
+                     ?>
+
+                     
+                     
                      </div>
-                     <p> </p>
-                     <p> </p>
                   </div>
                </div>
                <div class="navigation-top">

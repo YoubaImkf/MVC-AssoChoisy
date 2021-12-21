@@ -5,21 +5,26 @@ $action = $_REQUEST['action'];
 
 switch ($action)
 {
+    
+    case 'jardin':
+        {
+            $unarticle = $pdo->getunarticle(1);
+            include("M-V-C/Views/vu_activiteJardin.php");
+            break;
+        }
     case 'astronomie':
         {
+            $unarticle = $pdo->getunarticle(2);
             include("M-V-C/Views/vu_activiteAstronomie.php");
             break;
         }
     case 'animations':
         {
+            $unarticle = $pdo->getunarticle(3);
             include("M-V-C/Views/vu_activiteAnimations.php");
             break;
         }
-    case 'jardin':
-        {
-            include("M-V-C/Views/vu_activiteJardin.php");
-            break;
-        }
+  
         
 //----------------------------------------------------------------------
 

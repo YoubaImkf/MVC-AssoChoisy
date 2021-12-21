@@ -50,6 +50,7 @@ class Pdoassochoisy
                 Pdoassochoisy::$monPdoassochoisy=new Pdoassochoisy();
             }
             return Pdoassochoisy::$monPdoassochoisy;  
+
         }
 
 
@@ -69,6 +70,7 @@ public function getUser($login,$mdp)
     $ligne = $res->fetch(); //fetch = rechercher (fetch : quand on recupere une seul ligne)
    
     return $ligne;
+
 }
 
 //----------------- ! faut savoir si on garde "ARTICLE" ou pas ! ---------------
@@ -85,17 +87,23 @@ public function getUser($login,$mdp)
 		$lesLignes = $res->fetchAll(); //(fetch : quand on recupere plusieur lignes et all pour tout recup)
            
 		return $lesLignes;
+
 	}
 
 
-	public function getunarticle($article)
+	public function getunarticle($idactivite)
 	{
-        $req="select article..."; //faire la requete SQL
+        $req="select texte from articles where idactivites= :idactivite "; //faire la requete SQL
         $res =  self::$monPdo->prepare($req);
-        $res->bindvalue(':article',$article);
-        $res->execute();
-		$laLigne = $res->fetch();
+        $res->bindvalue(':idactivite',$idactivite);
+        $truc = $res->execute();
+		
+   
+        $laLigne = $res->fetch(PDO::FETCH_ASSOC);
+ 
+
 		return $laLigne; 
+
 	}
 
     // A    rticle le plus recent 
@@ -107,6 +115,18 @@ public function getUser($login,$mdp)
 		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
 
 		return $laLigne; 
+
+    }
+
+    public function getimage()
+    {
+        $req="select images from articles where idactivites= :idactivite "; 
+        //faire la requete SQL
+        $res =  self::$monPdo->query($req);
+		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
+
+		return $laLigne; 
+
     }
  //A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer //
 }

@@ -18,7 +18,7 @@
 
 
       <!--======================== Blog Area ======================-->
-   <section class="blog_area single-post-area section-padding">
+      <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
             <div class="col-lg-8 posts-list">
@@ -31,10 +31,24 @@
                      <p class="excert"> </p>
                      <p> En cours de publication </p>
                      <div class="quote-wrapper">
-                        <div class="quotes"> </div>
+                        <div class="quotes">
+                    
+                     <?php //on affiche l'article
+
+                     foreach($unarticle as $article) 
+                     {
+                     ?> 
+
+                        <p> <?php echo $article ?> </p>               
+                     
+
+                     <?php 
+                      } 
+                     ?>
+
+                     
+                     
                      </div>
-                     <p> </p>
-                     <p> </p>
                   </div>
                </div>
                <div class="navigation-top">
