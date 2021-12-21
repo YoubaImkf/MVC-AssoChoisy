@@ -120,7 +120,8 @@ public function getUser($login,$mdp)
 
     public function getimage()
     {
-        $req="select images from articles where idactivites= :idactivite "; 
+
+        $req="select images from articles where idactivites= :idactivite ";     
         //faire la requete SQL
         $res =  self::$monPdo->query($req);
 		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
