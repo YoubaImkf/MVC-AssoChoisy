@@ -109,7 +109,7 @@ public function getUser($login,$mdp)
     // A    rticle le plus recent 
     public function getarticleRecent()
     {
-        $req="select texte FROM articles WHERE datejour > CURDATE() limit 1"; 
+        $req="Select texte FROM articles WHERE datejour=(SELECT max(datejour) FROM articles) "; 
         //faire la requete SQL
         $res =  self::$monPdo->query($req);
 		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
@@ -120,7 +120,8 @@ public function getUser($login,$mdp)
 
     public function getimage()
     {
-        $req="select images from articles where idactivites= :idactivite "; 
+
+        $req="select nomimage from images where id=1";  // a changer en fonction de idimage id article   
         //faire la requete SQL
         $res =  self::$monPdo->query($req);
 		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
@@ -128,5 +129,16 @@ public function getUser($login,$mdp)
 		return $laLigne; 
 
     }
- //A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer //
+ //------------A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer--------------//
+
+ public function modifierArticle($article, $image)
+ {
+                
+     $req ="update voiture set couleur = '$couleur',  prix = $prix " ;
+     if($photo != '')
+         $req .= ", image = '$photo' ";
+     $req .= "where numImma = '$numImma'";    
+     $res=  PdoHtAuto::$monPdo->exec($req);
+     return $res;
+     }
 }
