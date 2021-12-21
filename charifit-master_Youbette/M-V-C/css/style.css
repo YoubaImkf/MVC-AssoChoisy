@@ -3,25 +3,6 @@
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_extend.scss */
 
 
-/*----START__CE QUE JAI RAJOUTER----*/
-
-html{
-scroll-behavior: smooth; 
-}
-
-.yo{/*message erreur login*/
-  color: red;
-}
-
-.button1{
-position: absolute;
-left: 50%;
-top: 93%;
-}
-
-/*----END__CE QUE JAI RAJOUTER----*/
-
-
 .flex-center-start {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,7 +490,7 @@ h3 {
 .boxed-btn3 {
   color: #222222;
   display: inline-block;
-  padding: 8px 28px;
+  padding: 13px 44px;
   font-size: 16px;
   font-weight: 600;
   border: 0;
@@ -525,7 +506,6 @@ h3 {
   background: #fff;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
-  margin-top: -20px;
 }
 
 /* line 41, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
@@ -1315,7 +1295,7 @@ h3 {
 
 /* line 158, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #a04e80;
+  color: #222;
 }
 
 /* line 162, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -1386,7 +1366,6 @@ h3 {
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  height: 15%;
   top: -70px;
   left: 0;
   right: 0;
@@ -1567,7 +1546,7 @@ h3 {
   font-size: 16px;
   font-weight: 400;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 10px;
 }
 
@@ -2211,8 +2190,8 @@ h3 {
 
 /* line 9, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 130px;
+  padding-bottom: 110px;
 }
 
 @media (max-width: 767px) {
@@ -2556,7 +2535,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .breadcam_bg {
-  background-image: url(../img/banner/Systeme_sol.png);
+  background-image: url(../img/banner/bradcam.png);
 }
 
 /* line 4, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
@@ -2579,6 +2558,7 @@ h3 {
 
 /* line 15, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .bradcam_area.overlay::before {
+  background: #3CC78F;
   opacity: .8;
 }
 
@@ -3734,7 +3714,7 @@ h3 {
 /*=================== contact banner end ====================*/
 /*=================== contact form start ====================*/
 /* line 45, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_contact.scss */
-.contact-title {  /*Titre contact*/
+.contact-title {
   font-size: 27px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -3752,7 +3732,7 @@ h3 {
 
 /* line 61, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_contact.scss */
 .form-contact .form-control {
-  border: 1px solid #8c8c91;   /* contour message...*/
+  border: 1px solid #e5e6e9;
   border-radius: 0px;
   height: 48px;
   padding-left: 18px;

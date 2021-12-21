@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-include("M-V-C/Views/vu_header.php") ;
+
 //include( la base de donnée )
-include("M-V-C/Models/data.php");
+include("M-V-C/Models.Data/data.choisy.php");
 
 
 
@@ -21,22 +21,26 @@ else
 
 $pdo=  Pdoassochoisy::getPdoassochoisy();
 
-// selon l'uc=... ↓
+// controle uc selon l'uc=... ↓
 switch($uc)   					
 {
 
     
 	case 'accueil':
 	{
+        include("M-V-C/Views/vu_header.php") ;
         include("M-V-C/Views/vu_banniere.php") ;
 		include("M-V-C/Views/vu_articleVideo.php");
 		include("M-V-C/Views/vu_lesActivites.php");
+        include("M-V-C/Views/vu_footer.php") ;
 		break;
 	}
 
     case 'pages':
     {
+        include("M-V-C/Views/vu_header.php") ;
         include("M-V-C/Controller/c_pages.php");
+        include("M-V-C/Views/vu_footer.php") ;
     }
 
     case 'administrer': //on changeras le ?uc=... pour cacher la page connexion 
@@ -49,6 +53,6 @@ switch($uc)
 
 
 
-include("M-V-C/Views/vu_footer.php") ;
+
  
 ?>
