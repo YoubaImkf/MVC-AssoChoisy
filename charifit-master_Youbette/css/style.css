@@ -1336,6 +1336,7 @@ h3 {
   transition: 0.6s;
 }
 
+
 /* line 174, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li {
   display: block;
@@ -1353,6 +1354,7 @@ h3 {
   color: #000;
 }
 
+
 /* line 182, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li a::before {
   display: none;
@@ -1360,7 +1362,7 @@ h3 {
 
 /* line 186, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu li:hover a {
-  color: #000;
+  color: #a04e80;
 }
 
 /* line 191, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */

@@ -10,7 +10,7 @@ switch ($action)
             include("M-V-C/Views/vu_activiteAstronomie.php");
             break;
         }
-    case 'animation':
+    case 'animations':
         {
             include("M-V-C/Views/vu_activiteAnimations.php");
             break;
