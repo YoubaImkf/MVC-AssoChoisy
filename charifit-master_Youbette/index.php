@@ -42,11 +42,13 @@ switch($uc)
         include("M-V-C/Views/vu_header.php") ;
         include("M-V-C/Controller/c_pages.php");
         include("M-V-C/Views/vu_footer.php") ;
+        break;
     }
 
     case 'administrer': //on changeras le ?uc=... pour cacher la page connexion 
     {
         include("M-V-C/Controller/c_administrer.php");  
+        break;
     }
 
 

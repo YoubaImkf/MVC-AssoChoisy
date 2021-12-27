@@ -96,9 +96,24 @@ public function getUser($login,$mdp)
         $req="select texte from articles where idactivites= :idactivite "; //faire la requete SQL
         $res =  self::$monPdo->prepare($req);
         $res->bindvalue(':idactivite',$idactivite);
-        $truc = $res->execute();
+        $res->execute();
 		
    
+        $laLigne = $res->fetch(PDO::FETCH_ASSOC);
+ 
+
+		return $laLigne; 
+
+	}
+
+    public function getArticle($id) //on recup l'id dun article
+	{
+        $req="select texte from articles where id= :id "; 
+        
+        $res =  self::$monPdo->prepare($req);
+        $res->bindvalue(':id',$id);
+        $res->execute();
+
         $laLigne = $res->fetch(PDO::FETCH_ASSOC);
  
 
@@ -121,24 +136,23 @@ public function getUser($login,$mdp)
     public function getimage()
     {
 
-        $req="select nomimage from images where id=1";  // a changer en fonction de idimage id article   
-        //faire la requete SQL
-        $res =  self::$monPdo->query($req);
-		$laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
+    $req="select nomimage from images where id=1";  // a changer en fonction de idimage id article   
+    //faire la requete SQL
+    $res =  self::$monPdo->query($req);
+    $laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
 
-		return $laLigne; 
+    return $laLigne; 
 
     }
  //------------A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer--------------//
 
- public function modifierArticle($article, $image)
+ public function modifierArticle($texte, $id)
  {
-                
-     $req ="update voiture set couleur = '$couleur',  prix = $prix " ;
-     if($photo != '')
-         $req .= ", image = '$photo' ";
-     $req .= "where numImma = '$numImma'";    
-     $res=  PdoHtAuto::$monPdo->exec($req);
-     return $res;
-     }
+
+    $req="update articles set texte = '$texte' where id='$id' "; //faire la requete SQL avoir l'article voulus avec l'Idactivité.( 1=jardin-partager; 2=astronomie; 3=animation )   
+    $res=  Pdoassochoisy::$monPdo->exec($req);
+    return $res;
+
+  }
+
 }

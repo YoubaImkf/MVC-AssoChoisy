@@ -1,9 +1,8 @@
 
-
 <!--------------------------------------------- ACTIVITE ASTRONOMIE ------------------------------------------------>
 
 <!-- bradcam_area_start  -->
- <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -37,6 +36,8 @@
 
                      foreach($unarticle as $article) 
                      {
+                        $id = $article['id'];
+
                      ?> 
 
                         <p> <?php echo $article ?> </p>               
@@ -44,8 +45,9 @@
 
                      <?php 
                       } 
-                     ?>
-                
+                     ?>   
+
+                    <a href="index.php?uc=administrer&action=modifier&id=<?= $id?>"> Modification 
                      
                      
                      </div>
