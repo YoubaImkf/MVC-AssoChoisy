@@ -140,5 +140,6 @@ public function getUser($login,$mdp)
      $req .= "where numImma = '$numImma'";    
      $res=  PdoHtAuto::$monPdo->exec($req);
      return $res;
+     
      }
 }
