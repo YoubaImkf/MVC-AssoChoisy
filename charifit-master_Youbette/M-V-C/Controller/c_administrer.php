@@ -32,7 +32,7 @@ switch ($action)
 //partie admin modif vu_astro 
         case 'astronomie':
             {
-                $unarticle = $pdo->getunarticle(2);
+                $desArticles = $pdo->getlesarticlesParAct(2);
                 include("M-V-C/Views/vu_header.php") ;
                 include("M-V-C/Views/vu_banniere.php") ;
                 include("M-V-C/Views/vu_articleMODIF.php");
@@ -46,14 +46,13 @@ switch ($action)
         case 'modifier'://le case cest la valeur attribuer a Action=..
             if(isset($_SESSION['admin'])){
                 $id = $_REQUEST['id'];
+                var_dump($id);
+                $article = $pdo->getArticle($id);
 
-                $unarticle = $pdo->getArticle($id);
-
-                $texte =  $unarticle['texte'];
+                $texte = $article['texte'];
                 
                 include("M-V-C/Views/vu_modifier.php");
             }
-
             else{
 
                 include("M-V-C/Views/vu_connexion.php");   

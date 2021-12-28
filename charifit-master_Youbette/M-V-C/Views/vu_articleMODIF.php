@@ -34,21 +34,23 @@
                     
                      <?php //on affiche l'article
                
-                     foreach($unarticle as $article) 
+                     foreach($desArticles as $article) 
                      {
-                        $id = '1';
-                        
+                        $id = $article['id'];
+                        $texte = $article['texte'];
+                        //$article['id']
                      ?> 
 
-                        <p> <?php echo $article ?> </p>               
+                        <p> <?php echo $texte ?> </p>               
+                     
+                       
                      
 
-                     <?php 
+               <a href="index.php?uc=administrer&action=modifier&id=<?= $id?>"> Modifier
+
+                    <?php 
                       } 
-                     ?>   
-
-                    <a href="index.php?uc=administrer&action=modifier&id=<?= $id?>"> Modification 
-                     
+                     ?>  
                      
                      </div>
                   </div>

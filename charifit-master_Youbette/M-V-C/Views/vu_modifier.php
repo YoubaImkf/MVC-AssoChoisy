@@ -15,8 +15,7 @@
      value='<?= $texte ?>'><?= $texte ?> </textarea> <br></h4>
 
    
-    <input type='hidden' name = 'id' size = 7 value='
-    <?= $id ?>'>
+    <input type='hidden' name = 'id' size = 7 value='<?= $id ?>'>
 
     <button type = 'submit' name='modifier'>modifier</button> <br>
     <button type = 'reset' value = 'Annuler'>Annuler</button> 

@@ -91,15 +91,15 @@ public function getUser($login,$mdp)
 	}
 
 
-	public function getunarticle($idactivite)
+	public function getlesarticlesParAct($idactivite)
 	{
-        $req="select texte from articles where idactivites= :idactivite "; //faire la requete SQL
+        $req="select texte,id from articles where idactivites= :idactivite "; //faire la requete SQL
         $res =  self::$monPdo->prepare($req);
         $res->bindvalue(':idactivite',$idactivite);
         $res->execute();
 		
    //condition si plus de 1 article PDO::FETCH_ASSOC sinon BOTH
-        $laLigne = $res->fetch(PDO::FETCH_ASSOC);
+        $laLigne = $res->fetchAll();
  
 
 		return $laLigne; 
@@ -114,7 +114,7 @@ public function getUser($login,$mdp)
         $res->bindvalue(':id',$id);
         $res->execute();
 
-        $laLigne = $res->fetch(PDO::FETCH_ASSOC);
+        $laLigne = $res->fetch();
  
 
 		return $laLigne; 
@@ -150,6 +150,7 @@ public function getUser($login,$mdp)
  {
 
     $req="update articles set texte = '$texte' where id='$id' ";   
+    var_dump($req);
     $res=  Pdoassochoisy::$monPdo->exec($req);
     return $res;
 

@@ -37,9 +37,12 @@
 
                      foreach($unarticle as $article) 
                      {
+                        $id = $article['id'];
+                        $texte = $article['texte'];
+                        //$article['id']
                      ?> 
 
-                        <p> <?php echo $article ?> </p>               
+                        <p> <?php echo $texte ?> </p>               
                      
 
                      <?php 
