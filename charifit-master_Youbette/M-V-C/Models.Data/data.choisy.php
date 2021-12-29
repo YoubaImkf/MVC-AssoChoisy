@@ -62,6 +62,7 @@ class Pdoassochoisy
 public function getUser($login,$mdp)
 {
     $mdp = hash('sha256',$mdp);       /* ----php hash le mdp entrer POUR MATCHER LE HASHAGE DU SERVEUR ET LE mdp entrer -------*/
+    
     $req = "select * from gestionnaire where login = :login and mdp = :mdp";
     $res =  self::$monPdo->prepare($req);
     $res->bindvalue(':login',$login);
@@ -89,6 +90,7 @@ public function getUser($login,$mdp)
 		return $lesLignes;
                 
 	}
+
 
 
 	public function getlesarticlesParAct($idactivite)
@@ -133,17 +135,33 @@ public function getUser($login,$mdp)
 
     }
 
-    public function getimage()
+    public function getTitreActivites($id)
     {
 
-    $req="select nomimage from images where id=1";  // a changer en fonction de idimage id article   
-    //faire la requete SQL
-    $res =  self::$monPdo->query($req);
-    $laLigne = $res->fetch(PDO::FETCH_ASSOC); // on comprend pas mais merci wayra et L'INTERNET( on modifie le mode par défaut en /1 ...)
+    $req="select libeler,id from activites where id= :id"; 
+    $res =  self::$monPdo->prepare($req);
+    $res->bindvalue(':id',$id);
+    $res->execute();
+    $laLigne = $res->fetchAll();
 
     return $laLigne; 
 
     }
+                    //////on utilise pas get image pour le moment//////
+                    public function getimage()
+                    {
+
+                    $req="select nomimage,id from images where id= :id";  // a changer en fonction de idimage id article   
+
+                    $res =  self::$monPdo->prepare($req);
+                    $res->bindvalue(':id',$id);
+                    $res->execute();
+                    $laLigne = $res->fetchAll();
+
+                    }
+
+                    
+  
  //------------A voir admin-FONCTIONS:  Modifier , Ajouter , Supprimer--------------//
 
  public function modifierArticle($id ,$texte)

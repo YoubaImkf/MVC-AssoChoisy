@@ -6,25 +6,28 @@ $action = $_REQUEST['action'];
 switch ($action)
 {
     
-    case 'jardin':
-        {
-            $unarticle = $pdo->getlesarticlesParAct(1);
-            include("M-V-C/Views/vu_activiteJardin.php");
-            break;
-        }
-    case 'astronomie':
-        {
-            $unarticle = $pdo->getlesarticlesParAct(2);
-            include("M-V-C/Views/vu_activiteAstronomie.php");
-            break;
-        }
-    case 'animations':
-        {
-            $unarticle = $pdo->getlesarticlesParAct(3);
-            include("M-V-C/Views/vu_activiteAnimations.php");
-            break;
-        }
-  
+
+        case 'jardin':
+            {
+                $titreActivite = $pdo->getTitreActivites(1);
+                $desArticles  = $pdo->getlesarticlesParAct(1);
+                include("M-V-C/Views/vu_activites.php");
+                break;
+            }
+        case 'astronomie':
+            {
+                $titreActivite =  $pdo->getTitreActivites(2);
+                $desArticles  = $pdo->getlesarticlesParAct(2);
+                include("M-V-C/Views/vu_activites.php");
+                break;
+            }
+        case 'animations':
+            {
+                $titreActivite =  $pdo->getTitreActivites(3);
+                $desArticles = $pdo->getlesarticlesParAct(3);
+                include("M-V-C/Views/vu_activites.php");
+                break;
+            }
         
 //----------------------------------------------------------------------
 

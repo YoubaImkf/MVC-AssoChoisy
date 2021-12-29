@@ -7,7 +7,25 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>ASTRONOMIE</h3>
+                        <h3>
+                          
+
+                            <?php //on affiche l'article
+
+                            foreach($titreActivite as $activite) 
+                            {
+                                $id = $activite['id'];
+                                $libeler = $activite['libeler'];
+
+                            ?> 
+
+                            <?php echo $libeler?>               
+    
+                            <?php 
+                            } 
+                            ?>
+
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -15,9 +33,9 @@
     </div>
 <!-- bradcam_area_end  -->
 
-
       <!--======================== Blog Area ======================-->
    <section class="blog_area single-post-area section-padding">
+      
       <div class="container">
          <div class="row">
             <div class="col-lg-8 posts-list">
@@ -27,6 +45,7 @@
                   </div>
                   <div class="blog_details">
                      <h2> Titre de l'article </h2>
+                     
                      <p class="excert"> </p>
                      <p> En cours de publication </p>
                      <div class="quote-wrapper">

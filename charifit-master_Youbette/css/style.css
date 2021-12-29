@@ -10,7 +10,10 @@ scroll-behavior: smooth;
 }
 
 .yo{/*message erreur login*/
-  color: red;
+
+  font-weight: bold;
+  color: rgb(196, 32, 32);
+  text-align: center;
 }
 
 .button1{
@@ -19,6 +22,9 @@ left: 50%;
 top: 93%;
 }
 
+p{
+  text-align: justify;
+}
 /*----END__CE QUE JAI RAJOUTER----*/
 
 

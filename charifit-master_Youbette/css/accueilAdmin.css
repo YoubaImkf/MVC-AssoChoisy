@@ -1,0 +1,30 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ecebeb;
+}
+
+.titre #title{
+    font-size:30px;
+    position: relative;
+    left: 45%;
+    text-align: center;
+    cursor: auto;
+    text-decoration: underline;
+    
+    
+}
+
+.link a{
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
+    margin: 10 ;
+
+    color: rgb(32, 32, 32);
+
+}
+.link a:hover{
+    
+    color: rgb(189, 0, 0);
+}

@@ -1,6 +1,6 @@
 
 
-<!--------------------------------------------- ACTIVITE ASTRONOMIE ------------------------------------------------>
+<!--------------------------------------------- ACTIVITE ASTRONOMIE/Jardin/Animation ------------------------------------------------>
 
 <!-- bradcam_area_start  -->
 <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
@@ -8,7 +8,25 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>JARDIN-PARTAGER</h3>
+                        <h3>
+                          
+
+                            <?php //on affiche l'article
+
+                            foreach($titreActivite as $activite) 
+                            {
+                                $id = $activite['id'];
+                                $libeler = $activite['libeler'];
+
+                            ?> 
+
+                            <?php echo $libeler?>               
+    
+                            <?php 
+                            } 
+                            ?>
+
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -18,7 +36,7 @@
 
 
       <!--======================== Blog Area ======================-->
-      <section class="blog_area single-post-area section-padding">
+   <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
             <div class="col-lg-8 posts-list">
@@ -27,7 +45,7 @@
                      <img class="img-fluid" src="img/blog/Dome.png" alt="">
                   </div>
                   <div class="blog_details">
-                     <h2> Titre de l'article </h2>
+                     <h2> Titre de l'article </h2>  <!-- faudras le recup sur base de données-->
                      <p class="excert"> </p>
                      <p> En cours de publication </p>
                      <div class="quote-wrapper">
@@ -35,7 +53,7 @@
                     
                      <?php //on affiche l'article
 
-                     foreach($unarticle as $article) 
+                    foreach($desArticles as $article) 
                      {
                         $id = $article['id'];
                         $texte = $article['texte'];
@@ -43,12 +61,11 @@
                      ?> 
 
                         <p> <?php echo $texte ?> </p>               
-                     
 
                      <?php 
                       } 
                      ?>
-
+                
                      
                      
                      </div>

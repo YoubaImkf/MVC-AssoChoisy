@@ -17,36 +17,54 @@ switch ($action)
     
         if($user == 0){    
             include("M-V-C/Views/vu_connexion.php");
-            $message = ' <p class="yo"> Erreur de login et/ou de mot de passe T-T </p> ';
+            $message = ' <p class="yo"> Erreur de login/mdp. Veuillez-Réessayer </p> ';
             include("M-V-C/Views/vu_message.php");
         }
         else{
             $_SESSION['admin'] = $login;
             $message = ' <p class="yo"> Connecter!! TU PEUX FAIRE CQUE TU VEUX </p> ';
-            include("M-V-C/Views/vu_message.php");   
+            include("M-V-C/Views/vu_message.php");
+            include("M-V-C/Views/vu_accueilAdmin.php");
             
         }
         break;
 
 
 //partie admin modif vu_astro 
-        case 'astronomie':
-            {
-                $desArticles = $pdo->getlesarticlesParAct(2);
-                include("M-V-C/Views/vu_header.php") ;
-                include("M-V-C/Views/vu_banniere.php") ;
-                include("M-V-C/Views/vu_articleMODIF.php");
-                include("M-V-C/Views/vu_footer.php") ;
-                break;
-            }
-        
+
+            case 'jardin':
+                {
+                    $titreActivite = $pdo->getTitreActivites(1);
+                    $desArticles = $pdo->getlesarticlesParAct(1);
+                    include("M-V-C/Views/vu_header.php") ;
+                    include("M-V-C/Views/vu_articleMODIF.php");
+                    break;
+                }
+            case 'astronomie':
+                {
+                    $titreActivite =  $pdo->getTitreActivites(2);
+                    $desArticles = $pdo->getlesarticlesParAct(2);
+                    include("M-V-C/Views/vu_header.php") ;
+                    include("M-V-C/Views/vu_articleMODIF.php");
+
+                    break;
+                }
+            case 'animations':
+                {
+                    $titreActivite =  $pdo->getTitreActivites(3);
+                    $desArticles  = $pdo->getlesarticlesParAct(3);
+                    include("M-V-C/Views/vu_header.php") ;
+                    include("M-V-C/Views/vu_articleMODIF.php");
+
+                    break;
+                }
             
 
             
         case 'modifier'://le case cest la valeur attribuer a Action=..
             if(isset($_SESSION['admin'])){
                 $id = $_REQUEST['id'];
-                var_dump($id);
+                //var_dump($id);
                 $article = $pdo->getArticle($id);
 
                 $texte = $article['texte'];
