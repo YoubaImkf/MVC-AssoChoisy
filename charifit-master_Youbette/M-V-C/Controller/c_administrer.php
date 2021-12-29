@@ -22,6 +22,7 @@ switch ($action)
         }
         else{
             $_SESSION['admin'] = $login;
+
             $message = ' <p class="yo"> Connecter!! TU PEUX FAIRE CQUE TU VEUX </p> ';
             include("M-V-C/Views/vu_message.php");
             include("M-V-C/Views/vu_accueilAdmin.php");
@@ -30,37 +31,49 @@ switch ($action)
         break;
 
 
-//partie admin modif vu_astro 
+//partie admin modif vu_astro   
+                //----------------- PROBLEME " si Admin " marche po ---------
 
             case 'jardin':
-                {
+                if(isset($_SESSION['admin'])){
                     $titreActivite = $pdo->getTitreActivites(1);
                     $desArticles = $pdo->getlesarticlesParAct(1);
                     include("M-V-C/Views/vu_header.php") ;
                     include("M-V-C/Views/vu_articleMODIF.php");
-                    break;
+                 
                 }
+                else{
+                    include("M-V-C/Views/vu_connexion.php");  
+            }
+            break;
+
             case 'astronomie':
-                {
+                if(isset($_SESSION['admin'])){   
                     $titreActivite =  $pdo->getTitreActivites(2);
                     $desArticles = $pdo->getlesarticlesParAct(2);
                     include("M-V-C/Views/vu_header.php") ;
                     include("M-V-C/Views/vu_articleMODIF.php");
-
-                    break;
                 }
+                else{
+                    include("M-V-C/Views/vu_connexion.php");  
+            }
+            break;
+
             case 'animations':
-                {
+                if(isset($_SESSION['admin'])){
                     $titreActivite =  $pdo->getTitreActivites(3);
                     $desArticles  = $pdo->getlesarticlesParAct(3);
                     include("M-V-C/Views/vu_header.php") ;
                     include("M-V-C/Views/vu_articleMODIF.php");
-
-                    break;
                 }
+                else{
+                    include("M-V-C/Views/vu_connexion.php");  
+            }
+            break;
             
 
             
+
         case 'modifier'://le case cest la valeur attribuer a Action=..
             if(isset($_SESSION['admin'])){
                 $id = $_REQUEST['id'];

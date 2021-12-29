@@ -9,9 +9,10 @@
         <label id="title" > <strong>Modifier Pages</strong> </label>
     </div>  
     <div class="link">
-        <ul><a href="index.php?uc=administrer&action=astronomie">Astronomie</a></ul>   
-        <ul><a href="index.php?uc=administrer&action=animation">Animation</a></ul>
         <ul><a href="index.php?uc=administrer&action=jardin">Jardin</a></ul>
+        <ul><a href="index.php?uc=administrer&action=astronomie">Astronomie</a></ul>   
+        <ul><a href="index.php?uc=administrer&action=animations">Animation</a></ul>
+       
         
     </div>
 </div>
