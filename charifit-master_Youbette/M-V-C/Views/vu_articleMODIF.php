@@ -2,7 +2,7 @@
 <!--------------------------------------------- ACTIVITE ASTRONOMIE ------------------------------------------------>
 
 <!-- bradcam_area_start  -->
-<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center" >
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -41,7 +41,7 @@
             <div class="col-lg-8 posts-list">
                <div class="single-post">
                   <div class="feature-img">
-                     <img class="img-fluid" src="img/blog/Dome.png" alt="">
+                     <img class="img-fluid" src="img/blog/Dome.png" alt=""> 
                   </div>
                   <div class="blog_details">
                      <h2> Titre de l'article </h2>
