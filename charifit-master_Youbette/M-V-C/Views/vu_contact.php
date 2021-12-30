@@ -57,44 +57,45 @@
                     </div>
                     
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
                            
                                 <div class="col-sm-6">    <!-- REGARDE LE JS POUR ERROR MESSAGE-->
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre nom'" placeholder="Entrer votre nom">
+                                        <input class="form-control valid" name="name" value="<?= (empty($_POST['name'])) ? '' : $_POST['name']; ?>" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre nom'" placeholder="Entrer votre nom">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="prenom" id="prenom" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre prenom'" placeholder="Entrer votre prenom">
+                                        <input class="form-control valid" name="prenom" value="<?= (empty($_POST['prenom'])) ? '' : $_POST['prenom']; ?>" id="prenom" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre prenom'" placeholder="Entrer votre prenom">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="number" id="number" type="tel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Numero'" placeholder="Numero">
+                                        <input class="form-control valid" name="number" value="<?= (empty($_POST['number'])) ? '' : $_POST['number']; ?>" id="number" type="tel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Numero'" placeholder="Numero">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
+                                        <input class="form-control valid" name="email" value="<?= (empty($_POST['email'])) ? '' : $_POST['email']; ?>" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sujet'" placeholder="Sujet">
+                                        <input class="form-control" name="subject" value="<?= (empty($_POST['subject'])) ? '' : $_POST['subject']; ?>" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sujet'" placeholder="Sujet">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre Message'" placeholder=" Entrer votre Message"></textarea>
+                                        <textarea class="form-control w-100" name="message" value="<?= (empty($_POST['message'])) ? '' : $_POST['message']; ?>" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrer votre Message'" placeholder=" Entrer votre Message"></textarea>
                                         <input type="hidden" name="g-token" id="g-token">
                                     </div>
                                 </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Envoyer</button>
+                                <button type="submit" class="button button-contactForm boxed-btn" name="valider">Envoyer</button>
                             </div>
+                            <?php include("contact_process.php");?>
                         </form>
                         <script src="https://www.google.com/recaptcha/api.js?render=6Lc9TKQdAAAAAHNOvo12z-fgATp05iyFawC6_pNz"></script>
                             <script>
