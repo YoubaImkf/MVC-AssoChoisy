@@ -151,7 +151,7 @@ public function getUser($login,$mdp)
                     public function getimage()
                     {
 
-                    $req="select nomimage,id from images where id= :id";  // a changer en fonction de idimage id article   
+                    $req="select nomimage from images,imgassocieractivites,activites where images.id = imgassocieractivites.idimage and activites.id = imgassocieractivites.idactivites and idactivites= :id";  // recup les image en fonction de lactivité
 
                     $res =  self::$monPdo->prepare($req);
                     $res->bindvalue(':id',$id);
