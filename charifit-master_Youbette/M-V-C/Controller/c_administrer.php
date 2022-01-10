@@ -40,7 +40,7 @@ switch ($action)
                     $desArticles = $pdo->getlesarticlesParAct(1);
                     include("M-V-C/Views/vu_header.php") ;
                     include("M-V-C/Views/vu_articleMODIF.php");
-                 
+                
                 }
                 else{
                     include("M-V-C/Views/vu_connexion.php");  
