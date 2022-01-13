@@ -148,7 +148,7 @@ public function getUser($login,$mdp)
 
     }
                     //////on utilise pas get image pour le moment//////
-                    public function getimage()
+                    public function getimage($id)
                     {
 
                     $req="select nomimage from images,imgassocieractivites,activites where images.id = imgassocieractivites.idimage and activites.id = imgassocieractivites.idactivites and idactivites= :id";  // recup les image en fonction de lactivité
