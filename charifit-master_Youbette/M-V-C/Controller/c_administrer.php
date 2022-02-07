@@ -35,7 +35,7 @@ switch ($action)
                 //----------------- PROBLEME " si Admin " marche po ---------
 
             case 'jardin':
-                if(isset($_SESSION['admin'])){
+                if(isset($_SESSION['admin'])    ){
                     $titreActivite = $pdo->getTitreActivites(1);
                     $desArticles = $pdo->getlesarticlesParAct(1);
                     include("M-V-C/Views/vu_header.php") ;

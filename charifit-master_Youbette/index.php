@@ -2,7 +2,7 @@
 
 session_start();
 
-//include( la base de donnée )
+//include( la base de donnée )<
 include("M-V-C/Models.Data/data.choisy.php");
 
 
