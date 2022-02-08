@@ -57,16 +57,22 @@
                      {
                         $id = $article['id'];
                         $texte = $article['texte'];
+                        $pieces= explode('.', $texte);
+                        //permet seletionner une partie du texte jusqua " . " mais prend pas le point donc a add manuellement
                         //$article['id']
                      ?> 
+                        
+                        <p> <?php echo $pieces[0].".".$pieces[1] ?> </p>   
 
-                        <p> <?php echo $texte ?> </p>               
-
+                        <a href="#"> <!-- ajouter route"get" parametré -->
+                        <h4>...</h4>
+                        </a>
+                     <!-- pour afficher a chaque article le ... -->
                      <?php 
                       } 
                      ?>
-                
-                     
+
+                   
                      
                      </div>
                   </div>
@@ -92,7 +98,7 @@
                                  <img class="img-fluid" src="" alt="">
                               </a>
                            </div>
-                           <div class="arrow">
+                           <!-- <div class="arrow">
                               <a href="#">
                                  <span class="lnr text-white ti-arrow-left"></span>
                               </a>
@@ -103,16 +109,16 @@
                                  <h4>......</h4>
                               </a>
                            </div>
-                        </div>
-                        <div
+                        </div> -->
+                        <!-- <div
                            class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
                            <div class="detials">
                               <p>Next Post</p>
                               <a href="#">
                                  <h4>.......</h4>
                               </a>
-                           </div>
-                           <div class="arrow">
+                           </div> -->
+                           <div class="arrow"> <!--Suivant "->"  -->
                               <a href="#">
                                  <span class="lnr text-white ti-arrow-right"></span>
                               </a>

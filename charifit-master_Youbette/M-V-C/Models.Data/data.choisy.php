@@ -95,7 +95,7 @@ public function getUser($login,$mdp)
 
 	public function getlesarticlesParAct($idactivite)
 	{
-        $req="select texte,id from articles where idactivites= :idactivite "; //faire la requete SQL
+        $req="select texte,id from articles where idactivites= :idactivite order by datejour desc"; //du plus recent au plus ancien
         $res =  self::$monPdo->prepare($req);
         $res->bindvalue(':idactivite',$idactivite);
         $res->execute();

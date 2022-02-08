@@ -48,8 +48,8 @@
                      
                      <p class="excert"> </p>
                      <p> En cours de publication </p>
-                     <div class="quote-wrapper">
-                        <div class="quotes">
+                     <div class="">
+                        <div class="">
                     
                      <?php //on affiche l'article
                
@@ -62,9 +62,10 @@
 
                         <p> <?php echo $texte ?> </p>               
                      
-                       
+                        <!-- https://antoineboursin.fr/courses/creez-un-editeur-de-texte-wysiwyg -->
                      
-
+                           <!-- gestionnaire : insert into  Select DATE( NOW()) -->
+                           
                <a href="index.php?uc=administrer&action=modifier&id=<?= $id?>"> Modifier
 
                     <?php 

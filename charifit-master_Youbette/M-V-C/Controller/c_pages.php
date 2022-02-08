@@ -28,7 +28,24 @@ switch ($action)
                 include("M-V-C/Views/vu_activites.php");
                 break;
             }
-        
+
+            //------------- EXEMPLE : --------------
+                    //--Dans route--
+                // Route::get('quelquechose/{id}',[  
+                //         'as'=>'chemin_quelquechose',
+                //         'uses'=>'quelquechoseController@quelquechosetruc'
+                // ]);
+
+                     //--Dans controller--
+                // function quelquechosetruc(Request $request,$id){ ...
+
+                    //--Dans vue--
+                    // ##Calling Route:##
+                // {{ route('admin.editIndustry',[$id]) }}
+
+
+
+
 //----------------------------------------------------------------------
 
 
