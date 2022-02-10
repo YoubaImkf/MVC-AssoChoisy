@@ -64,7 +64,7 @@
                         
                         <p> <?php echo $pieces[0].".".$pieces[1] ?> </p>   
 
-                        <a href="#"> <!-- ajouter route"get" parametré -->
+                        <a href="#"> <!-- ajouter route"get" parametré< -->
                         <h4>...</h4>
                         </a>
                      <!-- pour afficher a chaque article le ... -->
